@@ -24,9 +24,7 @@
     <section id="Beranda" class="main-content">
         <div class="intro">
             <h1>Rekayasa Perangkat Lunak</h1>
-            <p>Rekayasa Perangkat Lunak (RPL) adalah bidang profesi dan mata pelajaran yang mempelajari cara mengembangkan perangkat lunak, termasuk pembuatan, pemeliharaan, dan manajemen kualitasnya. RPL juga dikenal dengan istilah software engineering dalam bahasa Inggris. RPL merupakan proses terstruktur dan sistematis untuk menghasilkan perangkat lunak yang berkualitas tinggi, bebas dari kesalahan, dan memenuhi kebutuhan pengguna. Beberapa kompetensi yang dipelajari dalam RPL, di antaranya: Teknik pemrograman komputer, Perancangan perangkat lunak komputer, Perancangan basis data komputer, Pemrograman aplikasi mobile, Pemrograman website. 
-
-
+            <p>Rekayasa Perangkat Lunak (RPL) adalah bidang profesi dan mata pelajaran yang mempelajari cara mengembangkan perangkat lunak, termasuk pembuatan, pemeliharaan, dan manajemen kualitasnya. RPL juga dikenal dengan istilah software engineering dalam bahasa Inggris. RPL merupakan proses terstruktur dan sistematis untuk menghasilkan perangkat lunak yang berkualitas tinggi, bebas dari kesalahan, dan memenuhi kebutuhan pengguna.
 </p>
             <button>Selengkapnya</button>
         </div>
@@ -56,7 +54,7 @@ Misi:
     <section id="Kurikulum" class="curriculum">
         <h2>KURIKULUM</h2>
         <p>matapelajaran sesuai dengan apa yang sedang dipelajari oleh kelas X, XI dan XII PPLG.
-pada tingkat XI dan XII pembelajaran mapel kejuruan ada perubahan peningkatan menjadi pembelajaran Teaching Factory yang mengadopsi industri/Tech.Company.</p>
+pada tingkat XI dan XII pembelajaran mapel kejuruan ada perubahan <br> peningkatan menjadi pembelajaran Teaching Factory yang mengadopsi industri/Tech.Company.</p>
     </section>
     
     <section id="Pengajar" class="teachers">
@@ -130,18 +128,56 @@ pada tingkat XI dan XII pembelajaran mapel kejuruan ada perubahan peningkatan me
         </div>
     </section>
 
-    <section id="Fasilitas" class="facilities">
-        <h2>FASILITAS</h2>
-        <div class="facility-image">
-            <img src="fasilitas3.jpg" .alt="Fasilitas TKI">
-        </div>
-        <div class="facility-image">
-            <img src="fasilitas2.jpg" .alt="Fasilitas TKI">
-        </div>
-        <div class="facility-image">
-            <img src="fasilitas1.jpg" .alt="Fasilitas TKI">
-        </div>
-    </section>
+    <div class="slideshow-container">
+               
+                <div class="mySlides fade">
+                  
+                  <img src="fasilitas3.jpg" style="width:100%">
+                 </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="fasilitas2.jpg" style="width:100%">
+                 
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="fasilitas1.jpg" style="width:100%">
+                  
+                </div>
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+    
     <section class="main-content">
         <div class="intro">
         <p><h4>PPLG memiliki 1 gedung RPS dengan 4 Lab.komputer dan 1 gedung working space untuk Teaching Factory</h4></p>
